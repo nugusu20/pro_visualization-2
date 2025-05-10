@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מערכת ניהול 2 - מגמות חודשיות לפי ערוץ מכירה</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background: linear-gradient(to right, #457b9d, #1d3557);
+        color: #f1faee;
+        direction: rtl;
+      }
+      header {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(to left, #ffafcc, #bde0fe);
+      }
+      section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+      }
+      button {
+        background: linear-gradient(to right, #3a86ff, #8338ec);
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 2rem;
+      }
+      button:hover {
+        background: linear-gradient(to right, #8338ec, #3a86ff);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>מערכת ניהול 2 - ניתוח מגמות לפי ערוץ מכירה</h1>
+    </header>
+
+    <section>
+      <h2>תיאור המערכת</h2>
+      <p>
+        מערכת זו נועדה לאפשר למשתמשים לבחון מגמות חודשיות בהכנסות וביחידות
+        שנמכרו לפי ערוצי המכירה השונים (חנויות, אונליין, שותפים). היא עוזרת
+        להחליט על הקצאת משאבים וניהול מלאי לפי ביצועי הערוצים.
+      </p>
+
+      <h3>משמעות הגרף:</h3>
+      <p>
+        התרשים מדגיש שינויים חודשיים במכירות לפי ערוץ, ומאפשר לזהות עונות שיא,
+        ירידות בביקוש או הצלחה של ערוץ ספציפי לאורך זמן.
+      </p>
+
+      <section class="section" id="tableau">
+        <script
+          type="module"
+          src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+        ></script>
+        <tableau-viz
+          id="tableauViz"
+          src="https://public.tableau.com/views/Dashboard3_17469079281000/Dashboard3"
+          toolbar="bottom"
+          hide-tabs
+          width="100%"
+          height="800"
+        >
+        </tableau-viz>
+      </section>
+
+      <div style="text-align: center">
+        <button onclick="location.href='index.html'">חזרה למסך הבית</button>
+      </div>
+    </section>
+  </body>
+</html>

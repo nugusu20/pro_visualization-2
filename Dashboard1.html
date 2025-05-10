@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מערכת ניהול 1 - הכנסות לפי אזור</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background: linear-gradient(to right, #2a9d8f, #264653);
+        color: #fefae0;
+        direction: rtl;
+      }
+      header {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(to left, #e76f51, #f4a261);
+      }
+      section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+      }
+      button {
+        background: linear-gradient(to right, #219ebc, #023047);
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 2rem;
+      }
+      button:hover {
+        background: linear-gradient(to right, #023047, #219ebc);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>מערכת ניהול 1 - ניתוח הכנסות לפי אזור</h1>
+    </header>
+
+    <section>
+      <h2>תיאור המערכת</h2>
+      <p>
+        מערכת זו מספקת ויזואליזציה ממוקדת של הכנסות החברה לפי אזורים גאוגרפיים.
+        מטרתה לסייע למקבלי החלטות לזהות באילו אזורים מתבצעות המכירות הגבוהות
+        ביותר ולתכנן אסטרטגיות שיווק בהתאם.
+      </p>
+
+      <h3>משמעות הגרף:</h3>
+      <p>
+        התרשים שלפניכם מציג סך הכנסות לפי אזור – מידע חיוני להבנת תפוצה אזורית,
+        ביצועים לפי שוק, ואיתור הזדמנויות חדשות לצמיחה.
+      </p>
+
+      <section class="section" id="tableau">
+        <script
+          type="module"
+          src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+        ></script>
+        <tableau-viz
+          id="tableauViz"
+          src="https://public.tableau.com/views/Dashboard1_17469075332680/Dashboard1"
+          toolbar="bottom"
+          hide-tabs
+          width="100%"
+          height="800"
+        >
+        </tableau-viz>
+      </section>
+
+      <div style="text-align: center">
+        <button onclick="location.href='index.html'">חזרה למסך הבית</button>
+      </div>
+    </section>
+  </body>
+</html>

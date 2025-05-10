@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>מערכת ניהול 3 - פילוח ממוצע הכנסות לפי ערוץ</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 0;
+        background: linear-gradient(to right, #8e9eab, #eef2f3);
+        color: #1d3557;
+        direction: rtl;
+      }
+      header {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(to left, #ff9a8b, #fad0c4);
+      }
+      section {
+        max-width: 1000px;
+        margin: auto;
+        padding: 2rem;
+      }
+      button {
+        background: linear-gradient(to right, #f28482, #84a59d);
+        color: white;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-top: 2rem;
+      }
+      button:hover {
+        background: linear-gradient(to right, #84a59d, #f28482);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>מערכת ניהול 3 - פילוח ממוצע הכנסות לפי ערוץ</h1>
+    </header>
+
+    <section>
+      <h2>תיאור המערכת</h2>
+      <p>
+        מערכת זו מאפשרת לנתח את ממוצע ההכנסות לפי ערוצי המכירה של החברה –
+        אונליין, חנויות פיזיות ושותפים. היא נועדה לזהות את הערוצים שמניבים את
+        התשואה הגבוהה ביותר להזמנה, ולתעדף השקעות בהתאם.
+      </p>
+
+      <h3>משמעות הגרף:</h3>
+      <p>
+        התרשים מציג את ממוצע ההכנסה לכל ערוץ מכירה בפורמט עוגה, הממחיש את התרומה
+        היחסית של כל ערוץ. המידע מאפשר להשוות רווחיות בקלות.
+      </p>
+
+      <section class="section" id="tableau">
+        <script
+          type="module"
+          src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"
+        ></script>
+        <tableau-viz
+          id="tableauViz"
+          src="https://public.tableau.com/views/Dashboard2_17469078884840/Dashboard2"
+          toolbar="bottom"
+          hide-tabs
+          width="100%"
+          height="800"
+        >
+        </tableau-viz>
+      </section>
+
+      <div style="text-align: center">
+        <button onclick="location.href='index.html'">חזרה למסך הבית</button>
+      </div>
+    </section>
+  </body>
+</html>
